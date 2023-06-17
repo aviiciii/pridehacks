@@ -1,5 +1,6 @@
 const express = require('express');
 const connectDB = require('./db');
+const cors = require('cors');
 const eventsRouter = require('./routes/events');
 const fundraisersRouter = require('./routes/fundraisers');
 
@@ -18,7 +19,7 @@ app.use('/api/fundraisers', fundraisersRouter);
 app.use('/', (req, res) => {
     res.send('Hello World');
 });
-
+app.use(cors());
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

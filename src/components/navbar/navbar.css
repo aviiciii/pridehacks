@@ -1,16 +1,21 @@
 .navbar img{
     width: 80px;
     height: 50px;
+    cursor: pointer;
 }
 .navbar{
+    padding: 0.2rem;
     height: 3.5rem;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
     align-items: center;
     padding-left: 3rem;
+    background-color: pink;
 }
 .title{
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    cursor: pointer;
+    color: #222222;
 }

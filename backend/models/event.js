@@ -6,6 +6,7 @@ const eventSchema = new mongoose.Schema({
   date: { type: String},
   location:{ type: String},
   image: { type: String },
+  upcoming: { type: Boolean },
 }, { collection: 'events' }); // Specify the collection name
 
 const Event = mongoose.model('Event', eventSchema);
