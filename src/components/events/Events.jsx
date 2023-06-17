@@ -48,7 +48,7 @@ const Events = () => {
         <h2>
           Upcoming Events
         </h2>
-        <button onClick={()=>navigate('/events/create')} className='create-event'>
+        <button onClick={()=>navigate('/events/create')} className='create-event-button'>
           Create Event
         </button>
       </div>
@@ -75,7 +75,7 @@ const Events = () => {
 
       <div className="upcoming">
         {events
-          .filter(event => event.upcoming) // Filter events with upcoming=true
+          .filter(event => !event.upcoming) // Filter events with upcoming=true
           .map((event, index) => (
             <EventCard
               key={index}

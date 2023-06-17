@@ -20,8 +20,12 @@ router.get('/', async (req, res) => {
 // Create a new event
 router.post('/', async (req, res) => {
   try {
-    const { title, description, date,location, image , upcoming} = req.body;
-    const event = new Event({ title, description, date,location, image , upcoming });
+    const { title, description, date,location, upcoming} = req.body;
+    const event = new Event({ title, description, date,location, upcoming });
+    res.header('Access-Control-Allow-Origin','*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.header('Access-Control-Allow-Credentials', 'true');
     await event.save();
     res.status(201).json(event);
   } catch (error) {
