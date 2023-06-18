@@ -99,3 +99,29 @@
     width: 90%;
     height: 90%;
   }
+  @media (max-width: 768px) {
+    .homepage{
+      flex-direction: column;
+      padding: 5rem;
+      /* margin: 5rem; */
+    }
+    .home-left{
+      width: 100%;
+      margin: 4rem;
+    }
+    .home-right{
+      width: 100%;
+    }
+    .big-circle{
+      width: 300px;
+      height: 300px;
+    }
+    .small-circle{
+      width: 100px;
+      height: 100px;
+    }
+    .slider div img{
+      width: 100%;
+      height: 100%;
+    }
+  }

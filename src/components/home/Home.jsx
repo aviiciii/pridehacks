@@ -31,7 +31,7 @@ const HomePage = () => {
                         <div className="small-circle">Hangout</div>
 
                         <div className="small-circle"></div>
-                        <div className="small-circle">Fundraisers</div>
+                        <div className="small-circle" onClick={()=>history('/fundraisers')}>Fundraisers</div>
                     </div>
 
                 </div>

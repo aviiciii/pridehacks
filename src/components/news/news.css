@@ -1,0 +1,17 @@
+.news-container{
+    padding: 3rem;
+}
+.news-image{
+    width: 180px;
+    /* height: 140px;
+    h95% */
+    height: 90%;
+    margin: 0.5rem;
+}
+.news-card{
+    display: flex;
+    border: 1px solid pink;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
+    cursor: pointer;
+}
