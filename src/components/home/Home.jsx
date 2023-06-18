@@ -8,6 +8,10 @@ import image3 from '../../assets/3.avif';
 import image4 from '../../assets/4.jpg';
 import { useNavigate } from "react-router-dom";
 const HomePage = () => {
+    const handleDivClick = () => {
+        // Redirect the user to the desired website
+        window.location.href = 'http://127.0.0.1:5500/pridehacks/public/hangout.html';
+      };
     const carouselSettings = {
         // dots: true,
         infinite: true,
@@ -28,7 +32,7 @@ const HomePage = () => {
                         <div className="small-circle" onClick={()=>history('/news')}>News</div>
 
                         <div className="small-circle"></div>
-                        <div className="small-circle">Hangout</div>
+                        <div className="small-circle" onClick={handleDivClick}>Hangout</div>
 
                         <div className="small-circle"></div>
                         <div className="small-circle" onClick={()=>history('/fundraisers')}>Fundraisers</div>
