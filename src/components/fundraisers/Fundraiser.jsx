@@ -12,7 +12,7 @@ const FundraiserCard = (props) => {
         <h3 className='event-title'>{title}</h3>
         <img className='event-image' src={image} alt='Event' />
         <p> {description}</p>
-        <button onClick={()=>navigate('/fundraisers/donate')} className="create-fundraiser-button create-event-button">Donate Now</button>
+        <button onClick={()=>navigate('/fundraisers/donate')} className="create-fundraiser-button create-event-button donate-now">Donate Now</button>
         {/* <p>{description}</p> */}
   
   
