@@ -75,7 +75,7 @@ const Events = () => {
 
       <div className="upcoming">
         {events
-          .filter(event => !event.upcoming) // Filter events with upcoming=true
+          .filter(event => !event.upcoming && event.title) // Filter events with upcoming=true
           .map((event, index) => (
             <EventCard
               key={index}

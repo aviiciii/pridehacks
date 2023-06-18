@@ -11,7 +11,8 @@ const CreateEvent = () => {
         title: '',
         description: '',
         date: '',
-        location: ''
+        location: '',
+        upcoming: true
     });
     const handleFormChange = (event) => {
         const { id, value } = event.target;
@@ -23,38 +24,31 @@ const CreateEvent = () => {
     const upcoming = true;
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         try {
-            // const eventData = {
-            //     title,
-            //     description,
-            //     date,
-            //     location,
-            //     image,
-            // };
-
             const response = await fetch('http://localhost:8000/api/events', {
                 method: 'POST',
-                // mode:'cors',
-                // headers: {
-                //     'Content-Type': 'application/json',
-                    // 'Access-Control-Allow-Origin': '*'
-                // },
-                body: JSON.stringify(formData),
+                mode: 'cors',
+                headers: {
+                    'Access-Control-Allow-Origin': 'http://localhost:3000/',
+                    'Access-Control-Allow-Methods':'POST',
+                    "Content-Type": "application/json"
+                    
+                },
+                body: JSON.stringify({
+                    title: formData.title,
+                    description: formData.description,
+                    date: formData.date,
+                    location: formData.location,
+                    upcoming: true
+                })
             });
-            console.log(formData);
-
+    
+            console.log("this is json stringify" + JSON.stringify(formData));
+    
             if (response.ok) {
                 const data = await response.json();
-                // Handle the response as needed
-                console.log(data);
-
-                // Reset the form fields
-                // setTitle('');
-                // setDescription('');
-                // setDate('');
-                // setLocation('');
-                // setImage(null);
+                console.log("this is res " + JSON.stringify(data));
             } else {
                 throw new Error('Request failed');
             }
@@ -63,7 +57,7 @@ const CreateEvent = () => {
             // Handle error response
         }
     };
-
+    
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         setImage(file);

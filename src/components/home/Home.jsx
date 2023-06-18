@@ -25,7 +25,7 @@ const HomePage = () => {
                 <div className='home-left'>
                     <div className="big-circle">
                         <div className="small-circle" onClick={()=>history('/events')}>Events</div>
-                        <div className="small-circle">News</div>
+                        <div className="small-circle" onClick={()=>history('/news')}>News</div>
 
                         <div className="small-circle"></div>
                         <div className="small-circle">Hangout</div>
