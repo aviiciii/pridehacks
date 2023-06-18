@@ -12,6 +12,7 @@ import NewsContainer from './components/news/News';
 import Fundraisers from './components/fundraisers/Fundraiser';
 import CreateFundraiser from './components/fundraisers/CreateFundraiser';
 import HangoutPage from './components/hangout/Hangout';
+import Donate from './components/fundraisers/Donate';
 // import Room from './components/hangout/Room';
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/news" caseSensitive={false} element={<NewsContainer/>} />
         <Route path="/fundraisers" caseSensitive={false} element={<Fundraisers/>} />
         <Route path="/fundraisers/create" caseSensitive={false} element={<CreateFundraiser/>} />
+        <Route path="/fundraisers/donate" caseSensitive={false} element={<Donate/>} />
         <Route path="/hangout" caseSensitive={false} element={<HangoutPage/>} />
         {/* <Route path="/hangout/room" caseSensitive={false} element={<Room/>} /> */}
         

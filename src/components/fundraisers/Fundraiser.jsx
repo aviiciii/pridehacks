@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import image2 from '../../assets/2.jpg';
 import './fundraiser.css';
 const FundraiserCard = (props) => {
+  const navigate = useNavigate();
     const { title, description, date, location, image } = props;
   
     return (
@@ -11,7 +12,7 @@ const FundraiserCard = (props) => {
         <h3 className='event-title'>{title}</h3>
         <img className='event-image' src={image} alt='Event' />
         <p> {description}</p>
-        <button className="create-fundraiser-button create-event-button">Donate Now</button>
+        <button onClick={()=>navigate('/fundraisers/donate')} className="create-fundraiser-button create-event-button">Donate Now</button>
         {/* <p>{description}</p> */}
   
   
